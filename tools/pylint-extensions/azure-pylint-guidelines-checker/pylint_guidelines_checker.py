@@ -1832,25 +1832,25 @@ class CheckForPolicyUse(BaseChecker):
     name = "check-for-policies"
     priority = -1
     msgs = {
-        "C4739": (
+        "C9999": (
             "You should include a UserAgentPolicy in your HTTP pipeline. See details: "
             "https://azure.github.io/azure-sdk/python_implementation.html#network-operations",
             "missing-user-agent-policy",
             "You should include a UserAgentPolicy in the HTTP Pipeline.",
         ),
-        "C4740": (
+        "C9998": (
             "You should include a LoggingPolicy in your HTTP pipeline. See details: "
             "https://azure.github.io/azure-sdk/python_implementation.html#network-operations",
             "missing-logging-policy",
             "You should include a LoggingPolicy in the HTTP Pipeline.",
         ),
-        "C4741": (
+        "C9997": (
             "You should include a RetryPolicy in your HTTP pipeline. See details: "
             "https://azure.github.io/azure-sdk/python_implementation.html#network-operations",
             "missing-retry-policy",
             "You should include a RetryPolicy in the HTTP Pipeline.",
         ),
-        "C4742": (
+        "C9996": (
             "You should include a DistributedTracingPolicy in your HTTP pipeline. See details: "
             "https://azure.github.io/azure-sdk/python_implementation.html#network-operations",
             "missing-distributed-tracing-policy",
@@ -2795,9 +2795,9 @@ def register(linter):
     linter.register_checker(CheckDocstringParameters(linter))
 
     # Rules are disabled until false positive rate improved
-    # linter.register_checker(CheckForPolicyUse(linter))
-    # linter.register_checker(ClientHasApprovedMethodNamePrefix(linter))
+    linter.register_checker(CheckForPolicyUse(linter))
+    linter.register_checker(ClientHasApprovedMethodNamePrefix(linter))
 
-    # linter.register_checker(ClientDocstringUsesLiteralIncludeForCodeExample(linter))
-    # linter.register_checker(ClientLROMethodsUseCorePolling(linter))
-    # linter.register_checker(ClientLROMethodsUseCorrectNaming(linter))
+    linter.register_checker(ClientDocstringUsesLiteralIncludeForCodeExample(linter))
+    linter.register_checker(ClientLROMethodsUseCorePolling(linter))
+    linter.register_checker(ClientLROMethodsUseCorrectNaming(linter))
