@@ -1,30 +1,8 @@
 # ClientLROMethodsUseCorePolling
 
-************* Module azure.mgmt
-  
-************* Module azure
-  
-************* Module azure.mgmt.advisor._advisor_management_client
-  
-************* Module azure.mgmt.advisor.aio.operations._configurations_operations
-  
-************* Module azure.mgmt.advisor.aio.operations._recommendation_metadata_operations
-  
-************* Module azure.mgmt.advisor.aio._advisor_management_client
-  
-************* Module azure.mgmt.advisor.aio.operations._suppressions_operations
-  
-************* Module azure.mgmt.advisor.aio.operations._operations
-  
-************* Module azure.mgmt.advisor.operations._recommendations_operations
-  
-************* Module azure.mgmt.advisor.aio.operations._recommendations_operations
-  
-************* Module azure.mgmt.advisor.operations._recommendation_metadata_operations
-  
-************* Module azure.mgmt.advisor.operations._suppressions_operations
-  
-************* Module azure.mgmt.advisor.operations._configurations_operations
-  
-************* Module azure.mgmt.advisor.operations._operations
-  
+|Link|MsgID|Name|Message|
+|---|---|---|---|
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/keyvault/azure-keyvault-administration/azure/keyvault/administration/_backup_client.py#L44) | C4734 | (client-lro-methods-use-polling) | Long running operations should return a value that implements t |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/keyvault/azure-keyvault-administration/azure/keyvault/administration/_backup_client.py#L55) | C4734 | (client-lro-methods-use-polling) | Long running operations should return a value that implements t |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/keyvault/azure-keyvault-administration/azure/keyvault/administration/_backup_client.py#L137) | C4734 | (client-lro-methods-use-polling) | Long running operations should return a value that implements t |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/keyvault/azure-keyvault-administration/azure/keyvault/administration/_backup_client.py#L149) | C4734 | (client-lro-methods-use-polling) | Long running operations should return a value that implements t |

@@ -1,30 +1,22 @@
 # ClientListMethodsUseCorePaging
 
-************* Module azure.mgmt
-  
-************* Module azure
-  
-************* Module azure.mgmt.advisor._advisor_management_client
-  
-************* Module azure.mgmt.advisor.aio.operations._configurations_operations
-  
-************* Module azure.mgmt.advisor.aio.operations._recommendation_metadata_operations
-  
-************* Module azure.mgmt.advisor.aio._advisor_management_client
-  
-************* Module azure.mgmt.advisor.aio.operations._suppressions_operations
-  
-************* Module azure.mgmt.advisor.aio.operations._operations
-  
-************* Module azure.mgmt.advisor.operations._recommendations_operations
-  
-************* Module azure.mgmt.advisor.aio.operations._recommendations_operations
-  
-************* Module azure.mgmt.advisor.operations._recommendation_metadata_operations
-  
-************* Module azure.mgmt.advisor.operations._suppressions_operations
-  
-************* Module azure.mgmt.advisor.operations._configurations_operations
-  
-************* Module azure.mgmt.advisor.operations._operations
-  
+|Link|MsgID|Name|Message|
+|---|---|---|---|
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cosmos/azure-cosmos/azure/cosmos/cosmos_client.py#L423) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cosmos/azure-cosmos/azure/cosmos/aio/_cosmos_client.py#L395) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/digitaltwins/azure-digitaltwins-core/azure/digitaltwins/core/aio/_digitaltwins_client_async.py#L677) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/digitaltwins/azure-digitaltwins-core/azure/digitaltwins/core/_digitaltwins_client.py#L637) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/storage/azure-storage-blob/azure/storage/blob/_blob_service_client.py#L474) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/storage/azure-storage-blob/azure/storage/blob/_container_client.py#L937) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/storage/azure-storage-blob/azure/storage/blob/aio/_blob_service_client_async.py#L477) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/storage/azure-storage-blob/azure/storage/blob/aio/_container_client_async.py#L927) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/storage/azure-storage-file-datalake/azure/storage/filedatalake/_file_system_client.py#L555) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/storage/azure-storage-file-datalake/azure/storage/filedatalake/aio/_file_system_client_async.py#L496) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/tables/azure-data-tables/azure/data/tables/_table_client.py#L641) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/tables/azure-data-tables/azure/data/tables/_table_service_client.py#L243) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/tables/azure-data-tables/azure/data/tables/aio/_table_service_client_async.py#L270) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/tables/azure-data-tables/azure/data/tables/aio/_table_client_async.py#L642) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/textanalytics/azure-ai-textanalytics/azure/ai/textanalytics/aio/_text_analytics_client_async.py#L836) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/textanalytics/azure-ai-textanalytics/azure/ai/textanalytics/aio/_text_analytics_client_async.py#L1045) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/textanalytics/azure-ai-textanalytics/azure/ai/textanalytics/_text_analytics_client.py#L616) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/textanalytics/azure-ai-textanalytics/azure/ai/textanalytics/_text_analytics_client.py#L1050) | C4733 | (client-paging-methods-use-list) | Operations that return collections should return a value that i |

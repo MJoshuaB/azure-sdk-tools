@@ -1,30 +1,16 @@
 # ClientMethodsHaveTracingDecorators
 
-************* Module azure.mgmt
-  
-************* Module azure
-  
-************* Module azure.mgmt.advisor._advisor_management_client
-  
-************* Module azure.mgmt.advisor.aio.operations._configurations_operations
-  
-************* Module azure.mgmt.advisor.aio.operations._recommendation_metadata_operations
-  
-************* Module azure.mgmt.advisor.aio._advisor_management_client
-  
-************* Module azure.mgmt.advisor.aio.operations._suppressions_operations
-  
-************* Module azure.mgmt.advisor.aio.operations._operations
-  
-************* Module azure.mgmt.advisor.operations._recommendations_operations
-  
-************* Module azure.mgmt.advisor.aio.operations._recommendations_operations
-  
-************* Module azure.mgmt.advisor.operations._recommendation_metadata_operations
-  
-************* Module azure.mgmt.advisor.operations._suppressions_operations
-  
-************* Module azure.mgmt.advisor.operations._configurations_operations
-  
-************* Module azure.mgmt.advisor.operations._operations
-  
+|Link|MsgID|Name|Message|
+|---|---|---|---|
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cognitiveservices/azure-cognitiveservices-formrecognizer/azure/cognitiveservices/formrecognizer/form_recognizer_client.py#L75) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cognitiveservices/azure-cognitiveservices-formrecognizer/azure/cognitiveservices/formrecognizer/form_recognizer_client.py#L147) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cognitiveservices/azure-cognitiveservices-formrecognizer/azure/cognitiveservices/formrecognizer/form_recognizer_client.py#L203) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cognitiveservices/azure-cognitiveservices-formrecognizer/azure/cognitiveservices/formrecognizer/form_recognizer_client.py#L255) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cognitiveservices/azure-cognitiveservices-formrecognizer/azure/cognitiveservices/formrecognizer/form_recognizer_client.py#L310) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cognitiveservices/azure-cognitiveservices-formrecognizer/azure/cognitiveservices/formrecognizer/form_recognizer_client.py#L356) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cognitiveservices/azure-cognitiveservices-language-textanalytics/azure/cognitiveservices/language/textanalytics/text_analytics_client.py#L76) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cognitiveservices/azure-cognitiveservices-language-textanalytics/azure/cognitiveservices/language/textanalytics/text_analytics_client.py#L150) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cognitiveservices/azure-cognitiveservices-language-textanalytics/azure/cognitiveservices/language/textanalytics/text_analytics_client.py#L226) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cognitiveservices/azure-cognitiveservices-language-textanalytics/azure/cognitiveservices/language/textanalytics/text_analytics_client.py#L302) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cognitiveservices/azure-cognitiveservices-personalizer/azure/cognitiveservices/personalizer/personalizer_client.py#L80) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
+| [Link](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/loganalytics/azure-loganalytics/azure/loganalytics/log_analytics_data_client.py#L69) | C4723 | (client-method-missing-tracing-decorator) | Client method is missing the distributed tracing decorator - `d |
