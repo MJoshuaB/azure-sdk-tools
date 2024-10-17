@@ -3648,6 +3648,71 @@ class TestCheckDoNotUseLegacyTyping(pylint.testutils.CheckerTestCase):
         with self.assertNoMessages():
             self.checker.visit_functiondef(fdef)
 
+class MissingDependencyChecker(pylint.testutils.CheckerTestCase):
+    CHECKER_CLASS = checker.MissingDependencyChecker
+
+    @pytest.fixture(autouse=True)
+    def setup_dependencies(self, tmpdir):
+        """Setup a mock setup.py with some dependencies."""
+        self.setup_py_content = """
+            from setuptools import setup
+
+            setup(
+                name='example_package',
+                version='0.1',
+                install_requires=[
+                    'requests',
+                    'numpy'
+                ],
+            )
+        """
+        setup_file = tmpdir.join("setup.py")
+        setup_file.write(self.setup_py_content)
+        self.old_cwd = os.getcwd()
+        os.chdir(tmpdir)
+
+        yield
+
+        os.chdir(self.old_cwd)
+
+    def test_missing_dependency(self):
+        """Test that an import not in setup.py raises a message."""
+        node = astroid.parse("""
+            import aiohttp
+        """)
+        with self.assertAddsMessages(
+            MessageTest(
+                msg_id='missing-dependency',
+                node=node.body[0],
+                args=('aiohttp',),
+            )
+        ):
+            self.walk(node)
+
+    def test_present_dependency(self):
+        """Test that an import listed in setup.py does not raise a message."""
+        node = astroid.parse("""
+            import requests
+        """)
+        with self.assertNoMessages():
+            self.walk(node)
+
+    def test_builtin_package(self):
+        """Test that built-in packages do not raise messages."""
+        node = astroid.parse("""
+            import json
+        """)
+        with self.assertNoMessages():
+            self.walk(node)
+
+    def test_azure_package(self):
+        """Test that 'azure' packages are considered built-in."""
+        node = astroid.parse("""
+            import azure.storage.blob
+        """)
+        with self.assertNoMessages():
+            self.walk(node)
+
 # [Pylint] custom linter check for invalid use of @overload #3229
 # [Pylint] Custom Linter check for Exception Logging #3227
 # [Pylint] Address Commented out Pylint Custom Plugin Checkers #3228

@@ -2869,7 +2869,82 @@ class DoNotImportAsyncio(BaseChecker):
                     confidence=None,
                 )
 
+class MissingDependencyChecker(BaseChecker):
+    """Checker to ensure all third-party imports are defined in setup.py."""
+    name = 'missing-dependency-checker'
+    priority = -1
+    msgs = {
+        "C4768": (
+            "Third-party import '%s' is missing from setup.py 'install_requires'",
+            "missing-dependency",
+            "Used when a third-party package is not listed in setup.py",
+        ),
+    }
 
+    def open(self):
+        """Initialize setup.py dependencies when the checker starts."""
+        # Locate setup.py
+        setup_path = self._find_setup_py()
+        if setup_path:
+            self.dependencies = self._extract_dependencies(setup_path)
+        else:
+            self.dependencies = set()
+
+    def visit_import(self, node):
+        """Handle standard import statements."""
+        for name, _ in node.names:
+            package = name.split('.')[0]
+            if self._is_third_party_package(package) and package not in self.dependencies:
+                self.add_message('missing-dependency', node=node, args=(package,))
+
+    def visit_importfrom(self, node):
+        """Handle 'from module import ...' statements."""
+        package = node.modname.split('.')[0]
+        if self._is_third_party_package(package) and package not in self.dependencies:
+            self.add_message('missing-dependency', node=node, args=(package,))
+
+    def _is_third_party_package(self, package_name):
+        """Determine if a package is third-party or built-in."""
+        # A simplistic way to check if the package is built-in
+        try:
+            __import__(package_name)
+            # Consider all "azure" packages as internal or "builtin"
+            return not package_name.startswith('azure') and package_name not in self._builtin_packages()
+        except ImportError:
+            return True  # If import fails, it's likely third-party
+
+    def _builtin_packages(self):
+        """List of standard built-in packages in Python."""
+        import sys
+        return sys.builtin_module_names
+
+    def _find_setup_py(self):
+        import os
+        """Locate setup.py in the current or parent directories."""
+        current_dir = os.getcwd()
+        while True:
+            setup_path = os.path.join(current_dir, 'setup.py')
+            if os.path.isfile(setup_path):
+                return setup_path
+            parent_dir = os.path.dirname(current_dir)
+            if parent_dir == current_dir:  # Reached the root directory
+                return None
+            current_dir = parent_dir
+
+    def _extract_dependencies(self, setup_path):
+        """Extract the list of dependencies from setup.py using regex."""
+        import re
+
+        with open(setup_path, 'r') as f:
+            content = f.read()
+
+        # Simple regex to capture install_requires
+        matches = re.findall(r"install_requires\s*=\s*\[([^\]]*)\]", content)
+        if matches:
+            # Extract package names from the match
+            packages = set(re.findall(r"'([^']*)'", matches[0]))
+            return packages
+        return set()
 # [Pylint] custom linter check for invalid use of @overload #3229
 # [Pylint] Custom Linter check for Exception Logging #3227
 # [Pylint] Address Commented out Pylint Custom Plugin Checkers #3228
